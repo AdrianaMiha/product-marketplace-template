@@ -1,6 +1,9 @@
 module.exports = {
 
   theme: {
+    height: {
+     hsm: "42px"
+    },
     extend: {
       colors: {
         page: '#f3f4f6',

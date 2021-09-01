@@ -1,4 +1,14 @@
-mutation update($id: ID! $uuid: String, $user_id: String $slug: String, $name: String $first_name: String $last_name: String $bio: String) {
+mutation update(
+  $id: ID! 
+  $uuid: String, 
+  $user_id: String 
+  $slug: String, 
+  $name: String 
+  $first_name: String
+  $last_name: String 
+  $bio: String 
+  $date_of_birth: String
+  $favorite_food: String) {
   model_update(
     id: $id
     model: {
@@ -10,6 +20,8 @@ mutation update($id: ID! $uuid: String, $user_id: String $slug: String, $name: S
         { name: "first_name" value: $first_name }
         { name: "last_name" value: $last_name }
         { name: "bio" value: $bio }
+        { name: "date_of_birth" value: $date_of_birth }
+        { name: "favorite_food" value: $favorite_food }
       ]
     }
   ){
@@ -22,6 +34,8 @@ mutation update($id: ID! $uuid: String, $user_id: String $slug: String, $name: S
     uuid: property(name: "uuid")
     first_name: property(name: "first_name")
     last_name: property(name: "last_name")
+    # date_of_birth: property(name: "date_of_birth")
+    # favorite_food: property(name: "favorite_food")
 
     user: related_user(join_on_property: "uuid", foreign_property: "uuid") {
       id

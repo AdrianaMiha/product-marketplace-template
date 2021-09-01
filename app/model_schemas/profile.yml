@@ -7,3 +7,5 @@ properties:
   - name: first_name
   - name: last_name
   - name: bio
+  - name: date_of_birth
+  - name: favorite_food

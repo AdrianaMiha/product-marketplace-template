@@ -57,10 +57,3 @@ main p + p {
   @apply
     text-xs;
 }
-
-
-
-/* used by alpine.js to mark items before JS initializes */
-[x-cloak] {
-	display: none;
-}
